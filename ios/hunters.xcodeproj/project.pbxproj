@@ -19,6 +19,7 @@
 		6812386018E7EDFCAE953D18 /* libPods-hunters-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D051E9BAD1A0BA9BB7B44 /* libPods-hunters-tvOS.a */; };
 		7B52DC262544247900978D2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B52DC252544247900978D2C /* GoogleService-Info.plist */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A0DB5D90269C9E9A00CBF2B8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB5D8F269C9E9A00CBF2B8 /* File.swift */; };
 		A8CDFF6014CA2DBB70296559 /* libPods-hunters-huntersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8227BA736AA23A57854D84E3 /* libPods-hunters-huntersTests.a */; };
 		CE3CFD99A2A7207DB1F4E275 /* libPods-hunters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAEF08F2E2A75B45DD612FC /* libPods-hunters.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,8 @@
 		8227BA736AA23A57854D84E3 /* libPods-hunters-huntersTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hunters-huntersTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894722870F3634F712203F93 /* Pods-hunters-huntersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hunters-huntersTests.release.xcconfig"; path = "Target Support Files/Pods-hunters-huntersTests/Pods-hunters-huntersTests.release.xcconfig"; sourceTree = "<group>"; };
 		938D051E9BAD1A0BA9BB7B44 /* libPods-hunters-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hunters-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0DB5D8E269C9E9A00CBF2B8 /* hunters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hunters-Bridging-Header.h"; sourceTree = "<group>"; };
+		A0DB5D8F269C9E9A00CBF2B8 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BFAEF08F2E2A75B45DD612FC /* libPods-hunters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hunters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1356C7F57900FB599179DCA /* Pods-hunters-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hunters-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-hunters-tvOSTests/Pods-hunters-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC18880BFE20CE4D10A1520E /* Pods-hunters-huntersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hunters-huntersTests.debug.xcconfig"; path = "Target Support Files/Pods-hunters-huntersTests/Pods-hunters-huntersTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +155,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				A0DB5D8F269C9E9A00CBF2B8 /* File.swift */,
+				A0DB5D8E269C9E9A00CBF2B8 /* hunters-Bridging-Header.h */,
 			);
 			name = hunters;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				F4C6ADDB7E7DE493C2939308 /* [CP] Copy Pods Resources */,
+				352DF8FE06B53D9052A8B55D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +243,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				699EB31F079711D74FB75960 /* [CP] Copy Pods Resources */,
 				D8FFB5A272EC9E70E933F80C /* [CP-User] [RNFB] Core Configuration */,
+				87232AE99741BD540433166A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,8 +306,9 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 73NRM5JN65;
+						LastSwiftMigration = 1250;
+						ProvisioningStyle = Automatic;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -397,6 +405,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		352DF8FE06B53D9052A8B55D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hunters-huntersTests/Pods-hunters-huntersTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hunters-huntersTests/Pods-hunters-huntersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		435BD32EBBAC288157562A6E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -546,6 +572,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		87232AE99741BD540433166A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-hunters/Pods-hunters-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-hunters/Pods-hunters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D8FFB5A272EC9E70E933F80C /* [CP-User] [RNFB] Core Configuration */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -670,6 +714,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				A0DB5D90269C9E9A00CBF2B8 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +756,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CC18880BFE20CE4D10A1520E /* Pods-hunters-huntersTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -734,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 894722870F3634F712203F93 /* Pods-hunters-huntersTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = huntersTests/Info.plist;
@@ -757,12 +804,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "hunters/Destination Hunt.entitlements";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 73NRM5JN65;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = hunters/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -772,6 +820,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainyapps.destinationhunt;
 				PRODUCT_NAME = "Destination Hunt";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "hunters-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -785,11 +834,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "hunters/Destination Hunt.entitlements";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = 73NRM5JN65;
 				INFOPLIST_FILE = hunters/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -799,6 +849,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brainyapps.destinationhunt;
 				PRODUCT_NAME = "Destination Hunt";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "hunters-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
