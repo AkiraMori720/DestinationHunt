@@ -88,7 +88,7 @@ export default function RequestScreen({ navigation }) {
         {
           setMembershipId(Constants.memberships ? Constants.memberships[0]?.id : null);
         }
-        
+
       }
     }
   }
@@ -247,12 +247,12 @@ export default function RequestScreen({ navigation }) {
             } catch (ackErr) {
               console.warn('ackErr', ackErr);
             }
-  
+
             this.setState({receipt}, () => this.goNext());
           }
         },
       );
-  
+
       purchaseErrorSubscription = purchaseErrorListener(
         (error) => {
           console.log('purchaseErrorListener', error);
@@ -312,7 +312,7 @@ export default function RequestScreen({ navigation }) {
     else {
       requestBusiness();
     }
-    
+
     // let memid = membershipId;
     // if (!memid) {
     //   memid = Constants.memberships[0].id;
@@ -334,6 +334,26 @@ export default function RequestScreen({ navigation }) {
     //   console.warn(err.code, err.message);
     //   Alert.alert(err.message);
     // }
+  }
+
+  const onRestorePurchase = async () => {
+    setSpinner(true);
+    RNIap.getAvailablePurchases()
+        .then((purchases) => {
+          console.debug('restorePurchases');
+          let receipt = purchases[0].transactionReceipt;
+          if (Platform.OS === 'android' && purchases[0].purchaseToken) {
+            receipt = purchases[0].purchaseToken;
+          }
+          setSpinner(false);
+          Alert.alert('restore successful', 'you have successfully restored your purchase history');
+        })
+        .catch((err) => {
+          console.debug('restorePurchases');
+          console.error(err);
+          setSpinner(false);
+          Alert.alert('restore failed', 'restore failed reason');
+        });
   }
 
   const iap_success = async ()=> {
@@ -360,7 +380,7 @@ export default function RequestScreen({ navigation }) {
 
   request_membership_id = null;
   requestMembership = async (membership) => {
-    if (membershipId == membership.id) 
+    if (membershipId == membership.id)
     {
       Alert.alert('You already were subscribed.');
       return;
@@ -431,7 +451,7 @@ export default function RequestScreen({ navigation }) {
             }
           </TouchableOpacity>
         </View>
-        
+
         <Text style={styles.labelTxt}>Business name</Text>
         <TextInput
           style={styles.inputBox}
@@ -526,7 +546,7 @@ export default function RequestScreen({ navigation }) {
             />
           }
           {
-            (Platform.OS === 'ios' && Constants.memberships) && 
+            (Platform.OS === 'ios' && Constants.memberships) &&
             <DropDownPicker
               items={
                 Constants.memberships.map(each => ({
@@ -556,6 +576,12 @@ export default function RequestScreen({ navigation }) {
         <View style={{height: 460}}>
           {
             (Platform.OS === 'ios' && Constants.memberships) && renderiosMembership(membershipId)
+          }
+          {
+            (Platform.OS === 'ios' && Constants.memberships) &&
+            <TouchableOpacity style={styles.btn} onPress={() => onRestorePurchase()}>
+              <Text style={styles.btnTxt}>RESTORE PURCHASE</Text>
+            </TouchableOpacity>
           }
           <TouchableOpacity style={styles.btn} onPress={() => onRequest()}>
             <Text style={styles.btnTxt}>REQUEST ACCOUNT</Text>
