@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "778102658958",
+    "firebase_url": "https://destination-hunt-default-rtdb.firebaseio.com",
+    "project_id": "destination-hunt",
+    "storage_bucket": "destination-hunt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778102658958:android:2e31eb0c1bbcd2a9aa36df",
+        "android_client_info": {
+          "package_name": "com.brainyapps.destinationhunt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778102658958-i1p2o1m3kh64vo83sr7nku0hr6gq7l2j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.brainyapps.destinationhunt",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "778102658958-189bvl4tcqssvd0delegqqhiq2ri9cco.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyK1lx72NTCX-L1szB7_QMkl2jDLVuyBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "778102658958-189bvl4tcqssvd0delegqqhiq2ri9cco.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "778102658958-63idh8eftkoc0ejpmv41njis7r65pmkg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.brainyapps.destinationhunt"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

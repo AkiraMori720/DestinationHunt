@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Destination Hunt</string>
+    <string name="facebook_app_id">1055120904992309</string>
+    <string name="fb_login_protocol_scheme">fb1055120904992309</string>
+</resources>
