@@ -252,23 +252,23 @@ export default function SigninScreen({ navigation }) {
           {
             page === 'all' &&
             <View style={styles.btnsContainer}>
-              <TouchableOpacity style={[styles.btn, { backgroundColor: '#3b8fe2' }]} onPress={() => onFacebookSignin()}>
-                <View style={styles.btnIcon}>
-                  <FontAwesomeIcon name="facebook" style={[styles.btnIconTxt, { color: Colors.whiteColor }]}></FontAwesomeIcon>
-                </View>
-                <Text style={styles.btnTxt}>Sign in with Facebook</Text>
-              </TouchableOpacity>
-              <TouchableOpacity style={[styles.btn, { backgroundColor: '#fff', borderColor: Colors.greyWeakColor, borderWidth: 2 }]} onPress={() => onGoogleSignin()}>
-                <Image style={styles.btnIcon} source={Images.google} />
-                <Text style={[styles.btnTxt, { color: Colors.blackColor }]}>Sign in with Google</Text>
-              </TouchableOpacity>
-              {/* {
-                Platform.OS === 'ios' && */}
-                <TouchableOpacity style={[styles.btn, { backgroundColor: '#fff', borderColor: Colors.greyWeakColor, borderWidth: 2 }]} onPress={() => onAppleSignin()}>
-                  <Image style={[styles.btnIcon,{tintColor:Colors.blackColor}]} source={Images.appleIcon} />
-                  <Text style={[styles.btnTxt, { color: Colors.blackColor }]}>Sign in with Apple</Text>
-                </TouchableOpacity>
-              {/* } */}
+              {/*<TouchableOpacity style={[styles.btn, { backgroundColor: '#3b8fe2' }]} onPress={() => onFacebookSignin()}>*/}
+              {/*  <View style={styles.btnIcon}>*/}
+              {/*    <FontAwesomeIcon name="facebook" style={[styles.btnIconTxt, { color: Colors.whiteColor }]}></FontAwesomeIcon>*/}
+              {/*  </View>*/}
+              {/*  <Text style={styles.btnTxt}>Sign in with Facebook</Text>*/}
+              {/*</TouchableOpacity>*/}
+              {/*<TouchableOpacity style={[styles.btn, { backgroundColor: '#fff', borderColor: Colors.greyWeakColor, borderWidth: 2 }]} onPress={() => onGoogleSignin()}>*/}
+              {/*  <Image style={styles.btnIcon} source={Images.google} />*/}
+              {/*  <Text style={[styles.btnTxt, { color: Colors.blackColor }]}>Sign in with Google</Text>*/}
+              {/*</TouchableOpacity>*/}
+              {/*/!* {*/}
+              {/*  Platform.OS === 'ios' && *!/*/}
+              {/*  <TouchableOpacity style={[styles.btn, { backgroundColor: '#fff', borderColor: Colors.greyWeakColor, borderWidth: 2 }]} onPress={() => onAppleSignin()}>*/}
+              {/*    <Image style={[styles.btnIcon,{tintColor:Colors.blackColor}]} source={Images.appleIcon} />*/}
+              {/*    <Text style={[styles.btnTxt, { color: Colors.blackColor }]}>Sign in with Apple</Text>*/}
+              {/*  </TouchableOpacity>*/}
+              {/*/!* } *!/*/}
               <TouchableOpacity style={[styles.btn, { backgroundColor: Colors.yellowToneColor }]} onPress={() => navigation.navigate('Signup')}>
                 <View style={styles.btnIcon}>
                   <EntypoIcon name="mail" style={styles.btnIconTxt}></EntypoIcon>
@@ -427,7 +427,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: normalize(50, 'height'),
     zIndex: 10,
-    // marginTop: normalize(50, 'height'),        
+    // marginTop: normalize(50, 'height'),
   },
   backIcon: {
     fontSize: RFPercentage(2.5),

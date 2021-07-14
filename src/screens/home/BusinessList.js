@@ -74,7 +74,7 @@ export default function BusinessListScreen({ navigation }) {
   // })
 
   Constants.mode = 'user';
-  
+
 
   if (useIsFocused() && Constants.refreshFlag) {
     Constants.refreshFlag = false;
@@ -122,7 +122,7 @@ export default function BusinessListScreen({ navigation }) {
       var result = Constants.business.filter(each => each.status === 'approved');
       return result;
     }
-    
+
     var bids = [];
     services.forEach(each => {
       if (activeCategories?.findIndex(e => e.id === each.cid) > -1) {
@@ -143,7 +143,7 @@ export default function BusinessListScreen({ navigation }) {
     console.log(filtered);
   }
   const getDistanceMile = (item) => {
-    let myLocation = (Constants.location.latitude && Constants.location.longitude) ? 
+    let myLocation = (Constants.location.latitude && Constants.location.longitude) ?
         Constants.location : Constants.user?.location;
 
     if ((!myLocation?.latitude || !myLocation?.longitude) ||
@@ -213,7 +213,7 @@ export default function BusinessListScreen({ navigation }) {
       }
     }
     fetchPlaces();
-    
+
   }, [distanceSearch, categorySearch]);
 
   useEffect(() => {
@@ -224,7 +224,7 @@ export default function BusinessListScreen({ navigation }) {
   }, [activeCategories]);
 
   const onStayPress = () => {
-    let myLocation = (Constants.location.latitude && Constants.location.longitude) ? 
+    let myLocation = (Constants.location.latitude && Constants.location.longitude) ?
       Constants.location : Constants.user?.location;
 
     if ((!myLocation?.latitude || !myLocation?.longitude)) {
@@ -238,7 +238,7 @@ export default function BusinessListScreen({ navigation }) {
   }
 
   const onExplorePress = () => {
-    let myLocation = (Constants.location.latitude && Constants.location.longitude) ? 
+    let myLocation = (Constants.location.latitude && Constants.location.longitude) ?
       Constants.location : Constants.user?.location;
 
     if ((!myLocation?.latitude || !myLocation?.longitude)) {
@@ -396,7 +396,7 @@ export default function BusinessListScreen({ navigation }) {
           />
       </View>
       {
-        leftTab && 
+        leftTab &&
         <ScrollView style={styles.scrollBody}>
           {
             business.map((each, index) => {
@@ -415,7 +415,7 @@ export default function BusinessListScreen({ navigation }) {
         </ScrollView>
       }
       {
-        middleTab && 
+        middleTab &&
         <ScrollView style={styles.scrollBody}>
           {
             stay.map((each, index) => {
@@ -430,9 +430,9 @@ export default function BusinessListScreen({ navigation }) {
           }
         </ScrollView>
       }
-      
+
       {
-        rightTab && 
+        rightTab &&
         <ScrollView style={styles.scrollBody}>
           {
             explore.map((each, index) => {
@@ -585,6 +585,6 @@ const styles = StyleSheet.create({
   emptyTxt: {
     fontSize: RFPercentage(2.2),
     fontWeight: '600',
-    color: Colors.whiteColor
+    color: Colors.blackColor
   },
 });
