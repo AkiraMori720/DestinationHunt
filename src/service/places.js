@@ -6,7 +6,7 @@ import {
 import { getDistance, getPreciseDistance } from 'geolib';
 import { Colors, Images, Constants } from '@constants';
 
-const googleApiKey = 'AIzaSyDdPAhHXaBBh2V5D2kQ3Vy7YYrDrT7UW3I';
+const googleApiKey = 'AIzaSyAt4gxuUq7O8ThY2ZM1gdkh6OzyaLOfhkg';
 const language = 'en';
 
 const getDistanceMile = (location, orgLocation) => {
