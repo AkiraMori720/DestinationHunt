@@ -19,6 +19,7 @@
 		6812386018E7EDFCAE953D18 /* libPods-hunters-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 938D051E9BAD1A0BA9BB7B44 /* libPods-hunters-tvOS.a */; };
 		7B52DC262544247900978D2C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B52DC252544247900978D2C /* GoogleService-Info.plist */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		A0303123269F998000B317F6 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0303122269F998000B317F6 /* StoreKit.framework */; };
 		A0DB5D90269C9E9A00CBF2B8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB5D8F269C9E9A00CBF2B8 /* File.swift */; };
 		A8CDFF6014CA2DBB70296559 /* libPods-hunters-huntersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8227BA736AA23A57854D84E3 /* libPods-hunters-huntersTests.a */; };
 		CE3CFD99A2A7207DB1F4E275 /* libPods-hunters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFAEF08F2E2A75B45DD612FC /* libPods-hunters.a */; };
@@ -64,6 +65,7 @@
 		8227BA736AA23A57854D84E3 /* libPods-hunters-huntersTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hunters-huntersTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		894722870F3634F712203F93 /* Pods-hunters-huntersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hunters-huntersTests.release.xcconfig"; path = "Target Support Files/Pods-hunters-huntersTests/Pods-hunters-huntersTests.release.xcconfig"; sourceTree = "<group>"; };
 		938D051E9BAD1A0BA9BB7B44 /* libPods-hunters-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hunters-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0303122269F998000B317F6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A0DB5D8E269C9E9A00CBF2B8 /* hunters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hunters-Bridging-Header.h"; sourceTree = "<group>"; };
 		A0DB5D8F269C9E9A00CBF2B8 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		BFAEF08F2E2A75B45DD612FC /* libPods-hunters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hunters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3CFD99A2A7207DB1F4E275 /* libPods-hunters.a in Frameworks */,
+				A0303123269F998000B317F6 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +167,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0303122269F998000B317F6 /* StoreKit.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				BFAEF08F2E2A75B45DD612FC /* libPods-hunters.a */,
